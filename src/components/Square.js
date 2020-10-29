@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Square = () => {
+function Square({value, onClick}) {
     return (
         <>
-        <p>Square</p>
-        <p>Pages</p>
+        <button onClick={onClick}>
+            {value}
+        </button>
         </>
     )
 }

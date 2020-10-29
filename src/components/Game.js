@@ -1,10 +1,23 @@
 import React from 'react'
+import Board from './Board'
 
-const Game = () => {
+function Game() {
+
+    function handleClick() {
+
+    }
+
+    function jumpTo() {
+
+    }
+
+    function renderMoves() {
+        
+    }
+
     return (
         <>
-        <p>Game</p>
-        <p>Pages</p>
+        <Board onClick={handleClick} />
         </>
     )
 }
