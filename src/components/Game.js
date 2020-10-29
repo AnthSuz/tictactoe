@@ -7,8 +7,14 @@ function Game() {
     const [xIsNext, setXIsNext] = useState(true);
     const winner = calculateWinner(board)
 
-    function handleClick() {
-
+    function handleClick(i) {
+        const boardCopy = [...board];
+        // Si le clique sur une case déjà occupé ou si la partie est gagné, on stop via return
+        if(winner || boardCopy[i]) return;
+        // Mettre un X ou un O dans la carré cliqué
+        boardCopy[i] = xIsNext ? 'X' : 'O';
+        setBoard(boardCopy)
+        setXIsNext(!xIsNext)
     }
 
     function jumpTo() {
